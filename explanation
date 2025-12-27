@@ -1,0 +1,9 @@
+This Streamlit app is a secure file encryption system. It lets users sign up, log in, and upload files. 
+Files are encrypted using AES-CTR with keys derived from strong entropy sources like user input and system activity.
+The app packages the encrypted file, metadata, and keys into a ZIP, where the master key itself is encrypted with a password-derived key. 
+On decryption, the user provides their password to recover the master key and decrypt the file. 
+The design demonstrates entropy pooling, layered encryption, and session management. 
+
+ py -3 -m venv env
+.\env\Scripts\activate  
+ streamlit run app.py  
